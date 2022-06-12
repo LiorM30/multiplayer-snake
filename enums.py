@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class Player_Commands(str, Enum):  # inhereting from str to make serializeble
+class Player_Command(str, Enum):  # inhereting from str to make serializeble
     MOVE_UP = 'move up'
     MOVE_DOWN = 'move down'
     MOVE_LEFT = 'move left'
@@ -17,12 +17,13 @@ class Direction(Enum):
     RIGHT = 'right'
 
 
-class Game_Objects(str, Enum):
+class Game_Object(str, Enum):
     Player = 'player'
+    APPLE = 'apple'
+    SNAKE_HEAD = 'snake head'
+    SNAKE_BODY = 'snake body'
+    SNAKE_TAIL = 'snake tail'
 
-
-class Game_Comm_API(str, Enum):
-    REQUEST_SPRITES = 'request sprites'
 
 class Color(Enum):
     # (R, G, B)
@@ -49,4 +50,3 @@ class Snake_Part(Enum):
     TAIL = 'tail'
     BODY = 'body'
     HEAD = 'head'
-

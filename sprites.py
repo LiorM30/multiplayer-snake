@@ -65,7 +65,10 @@ class Snake_Body(pygame.sprite.Sprite):
         self._layer = self.rect.bottom
 
     def update(self):
-        self.move()
+        if self.is_exploding:
+            self.explode()
+        else:
+            self.move()
 
     def move(self) -> None:
         """
@@ -170,6 +173,7 @@ class Snake_Body(pygame.sprite.Sprite):
         :param coords: a point on screen
         :return: whether the point is in the sprite
         """
+
         return self.rect.collidepoint(coords)
 
     def explode(self) -> None:
