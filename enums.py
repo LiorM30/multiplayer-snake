@@ -10,7 +10,7 @@ class Player_Command(str, Enum):  # inhereting from str to make serializeble
     QUIT = 'quit'
 
 
-class Direction(Enum):
+class Direction(str, Enum):
     UP = 'up'
     DOWN = 'down'
     LEFT = 'left'
@@ -23,6 +23,7 @@ class Game_Object(str, Enum):
     SNAKE_HEAD = 'snake head'
     SNAKE_BODY = 'snake body'
     SNAKE_TAIL = 'snake tail'
+    EXPLOSION = 'explosion'
 
 
 class Color(Enum):

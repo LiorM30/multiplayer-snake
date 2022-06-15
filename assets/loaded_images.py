@@ -2,6 +2,7 @@ import pygame
 import os
 
 from snake_config import Snake_Config as Config
+from enums import Game_Object
 
 
 class Loaded_Images:
@@ -48,9 +49,9 @@ class Loaded_Images:
             self.explosion_frames.append(to_add)
 
         self.all = {
-            'head': self.snake_head,
-            'body': self.snake_body,
-            'tail': self.snake_tail,
-            'apple': self.apple,
-            'explosion': self.explosion_frames
+            Game_Object.SNAKE_HEAD: self.snake_head,
+            Game_Object.SNAKE_BODY: self.snake_body,
+            Game_Object.SNAKE_TAIL: self.snake_tail,
+            Game_Object.APPLE: self.apple,
+            Game_Object.EXPLOSION: self.explosion_frames
         }

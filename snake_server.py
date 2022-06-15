@@ -1,5 +1,4 @@
 import json
-from os import kill
 import socket
 import threading
 import pygame
@@ -10,7 +9,6 @@ import argparse
 import random
 
 from enums import Direction, Player_Command, Game_Object, Snake_Part
-from sprites import Player as Player_Sprite
 from sprites import Snake_Body, Apple
 from game_packet_API import Game_Packet, Game_Packet_Type
 from snake_config import Snake_Config as Config
@@ -67,19 +65,30 @@ class Snake_Server:
         # self._player_sprites = {}
 
         pygame.init()
+
+        self._server_screen = pygame.display.set_mode(
+            (40, 40)
+        )
+
         self._clock = pygame.time.Clock()
 
         self._snakes = {}
+        for i in range(len(self._players)):
+            self._snakes[i] = []
         self._snake_sprite_group = pygame.sprite.Group()
-        self._init_snakes()
-        self._apples = self._generate_apples()
-        self._apple_sprite_group = pygame.sprite.Group()
-        self._apple_sprite_group.add(self._apples)
 
         self.image_loader = Loaded_Images()
         self.all_images = self.image_loader.all
 
         self._sprites_to_send = []
+
+        self._init_snakes()
+        self._apples = self._generate_apples(len(self._players))
+        self._apple_sprite_group = pygame.sprite.Group()
+        self._apple_sprite_group.add(self._apples)
+
+        self.image_loader = Loaded_Images()
+        self.all_images = self.image_loader.all
 
         for ID, player in self._players.items():
             self._send_data(
@@ -96,6 +105,7 @@ class Snake_Server:
         """
         currentID = 0
         while True:
+            self._logger.debug('Listening for clients')
             self.server_sock.listen()
             client, client_address = self.server_sock.accept()
             username = self._recieve_packet(client)['data']['username']
@@ -116,13 +126,13 @@ class Snake_Server:
                 )
             )
 
-            self._player_sprites[currentID] = Player_Sprite(
-                currentID,
-                (0, 0)
-            )
+            # self._player_sprites[currentID] = Player_Sprite(
+            #     currentID,
+            #     (0, 0)
+            # )
 
             currentID += 1
-            if len(self._players) == 2:
+            if len(self._players) == 1:
                 break
 
     def _handle_player(self, player: Player):
@@ -150,12 +160,15 @@ class Snake_Server:
                             )
                             print(val)
 
-                elif packet['type'] == Game_Packet_Type.RECIEVE_SPRITES:
+                elif packet['type'] == Game_Packet_Type.RECIEVE_SPRITES_REQUEST:
+                    data = []
+                    for sprite in self._sprites_to_send:
+                        data.append(sprite.to_dict())
                     self._send_data(
                         player.sock,
                         Game_Packet(
                             type=Game_Packet_Type.SPRITES_TO_RENDER,
-                            data=self._sprites_to_send
+                            data=data
                         )
                     )
 
@@ -173,7 +186,7 @@ class Snake_Server:
             self._snakes[i].append(
                 Snake_Body(
                     7.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1) * Config.TILE_HEIGHT,
+                    row_space * (i + 1),
                     Snake_Part.HEAD,
                     Direction.RIGHT,
                     self.all_images
@@ -182,8 +195,8 @@ class Snake_Server:
             self._snakes[i].append(
                 Snake_Body(
                     6.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1) * Config.TILE_HEIGHT,
-                    Snake_Part.HEAD,
+                    row_space * (i + 1),
+                    Snake_Part.BODY,
                     Direction.RIGHT,
                     self.all_images
                 )
@@ -191,12 +204,13 @@ class Snake_Server:
             self._snakes[i].append(
                 Snake_Body(
                     5.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1) * Config.TILE_HEIGHT,
-                    Snake_Part.HEAD,
+                    row_space * (i + 1),
+                    Snake_Part.TAIL,
                     Direction.RIGHT,
                     self.all_images
                 )
             )
+            self._sprites_to_send.extend(self._snakes[i])
             self._snake_sprite_group.add(self._snakes[i])
 
     def _generate_apples(self, num_of_apples: int) -> Apple:
@@ -220,13 +234,15 @@ class Snake_Server:
             again = True
             while again:
                 again = False
-                for snake in self._snakes:
+                for snake in self._snakes.values():
                     for part in snake:
                         if part.collide_point(apple_coords):
                             apple_coords = (
-                                random.randrange(0, Config.GAME_WIDTH + 1) * Config.TILE_WIDTH
+                                random.randrange(
+                                    0, Config.GAME_WIDTH + 1) * Config.TILE_WIDTH
                                 + Config.TILE_WIDTH / 2,  # offset
-                                random.randrange(0, Config.GAME_HEIGHT + 1) * Config.TILE_HEIGHT
+                                random.randrange(
+                                    0, Config.GAME_HEIGHT + 1) * Config.TILE_HEIGHT
                                 + Config.TILE_WIDTH / 2,
                             )
                             again = True
@@ -239,7 +255,7 @@ class Snake_Server:
             apples.append(Apple(
                 apple_coords[0], apple_coords[1], self.all_images
             ))
-
+        self._sprites_to_send.extend(apples)
         return apples
 
     def _snake_hit_apple(self, snake: list[Snake_Body]) -> Apple:
@@ -269,6 +285,7 @@ class Snake_Server:
             self.all_images
         )
 
+        self._sprites_to_send.append(new_part)
         snake.append(new_part)
         self._snake_sprite_group.add(new_part)
 
@@ -297,6 +314,10 @@ class Snake_Server:
         :param client: the client to send to
         :param data: the data to send
         """
+
+        # ser_data = json.dumps(vars(data))
+        # for chunk in self.chunks(ser_data, 1024):
+        #     client.send(chunk.encode())
         ser_data = json.dumps(vars(data))
         client.send(ser_data.encode())
 
@@ -320,8 +341,8 @@ class Snake_Server:
         pygame.time.set_timer(UPDATE_SNAKE, Config.TIME_BETWEEN_SNAKE_UPDATES)
 
         new_directions = {}
-        for i in len(self._players):
-            new_directions[i] = Direction.RIGHT
+        for ID in self._players:
+            new_directions[ID] = Direction.RIGHT
 
         for t in self._threads:
             t.start()
@@ -375,9 +396,11 @@ class Snake_Server:
                 apple_hit = self._snake_hit_apple(snake)
                 if apple_hit:
                     self._grow_snake(snake)
+                    self._apples.remove(apple_hit)
+                    self._sprites_to_send.remove(apple_hit)
                     apple_hit.kill()
                     new_apple = self._generate_apples(1)
-                    self._apples.append(new_apple)
+                    self._apples.append(new_apple[0])
                     self._apple_sprite_group.add(new_apple)
 
                 if self._snake_hit_self(snake) or self._snake_hit_screen_edge(snake):
@@ -388,18 +411,16 @@ class Snake_Server:
                 # sprite.update()
             self._snake_sprite_group.update()
 
-            new_sprites_to_send = []
-            for snake_id, snake in self._snakes.items():
-                for part in snake:
-                    match part.type
-                    new_sprites_to_send.append(
-                        [Game_Object.Player, list(sprite.get_coords())]
-                    )
+            # new_sprites_to_send = []
+            # for snake_id, snake in self._snakes.items():
+            #     for part in snake:
+            #         # print(part.to_dict())
+            #         new_sprites_to_send.append(part.to_dict())
+            #     for apple in self._apples:
+            #         new_sprites_to_send.append(apple.to_dict())
 
-            self._sprites_to_send = new_sprites_to_send.copy()
+            # self._sprites_to_send = new_sprites_to_send.copy()
 
-            # for ID, player in self._players.items():
-            #     self._send_data(player.sock, self._sprites_to_send)
             # sleep(1/30)
             self._clock.tick(20)
 

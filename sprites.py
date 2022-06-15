@@ -1,6 +1,6 @@
 import pygame
 
-from enums import Direction, Snake_Part, Color
+from enums import Direction, Game_Object, Snake_Part, Color
 from snake_config import Snake_Config as Config
 
 
@@ -48,7 +48,13 @@ class Snake_Body(pygame.sprite.Sprite):
 
         self.all_images = all_images
         self._part = part
-        self.image = self.all_images[part.value]
+        match part:
+            case Snake_Part.HEAD:
+                self.image = self.all_images[Game_Object.SNAKE_HEAD]
+            case Snake_Part.BODY:
+                self.image = self.all_images[Game_Object.SNAKE_BODY]
+            case Snake_Part.TAIL:
+                self.image = self.all_images[Game_Object.SNAKE_TAIL]
         self.change_costume(part)
 
         self.rect = self.image.get_rect()
@@ -56,7 +62,7 @@ class Snake_Body(pygame.sprite.Sprite):
 
         self.direction = direction
 
-        self.explosion_sprites = self.all_images['explosion']
+        self.explosion_sprites = self.all_images[Game_Object.EXPLOSION]
         self.explode_frame = 0
         self.is_exploding = False
         self.current_rotation = 0  # pointing up
@@ -84,7 +90,7 @@ class Snake_Body(pygame.sprite.Sprite):
                 self.rect.x -= Config.TILE_WIDTH / 10
             case Direction.RIGHT:
                 self.rect.x += Config.TILE_WIDTH / 10
-            case Direction.NONE:
+            case _:
                 pass
 
     def set_direction(self, new_direction: Direction) -> None:
@@ -203,14 +209,35 @@ class Snake_Body(pygame.sprite.Sprite):
         """
 
         self._part = new_costume
-        self.image = self.all_images[new_costume.value]
+        match new_costume:
+            case Snake_Part.HEAD:
+                self.image = self.all_images[Game_Object.SNAKE_HEAD]
+            case Snake_Part.BODY:
+                self.image = self.all_images[Game_Object.SNAKE_BODY]
+            case Snake_Part.TAIL:
+                self.image = self.all_images[Game_Object.SNAKE_TAIL]
+
+    def to_dict(self):
+        a_dict = {}
+        match self._part:
+            case Snake_Part.HEAD:
+                a_dict['object'] = Game_Object.SNAKE_HEAD
+            case Snake_Part.BODY:
+                a_dict['object'] = Game_Object.SNAKE_BODY
+            case Snake_Part.TAIL:
+                a_dict['object'] = Game_Object.SNAKE_TAIL
+
+        a_dict['coords'] = list(self.pos())
+        a_dict['direction'] = self.direction
+
+        return a_dict
 
 
 class Apple(pygame.sprite.Sprite):
     def __init__(self, x: int, y: int, all_images: dict) -> None:
         super().__init__()
         self.all_images = all_images
-        self.image = all_images['apple']
+        self.image = all_images[Game_Object.APPLE]
 
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
@@ -235,9 +262,19 @@ class Apple(pygame.sprite.Sprite):
 
         return self.rect.y
 
+    def pos(self):
+        return (self.rect.x, self.rect.y)
+
     def get_rect(self) -> pygame.rect:
         """
         :return: the sprite's rect
         """
 
         return self.rect
+
+    def to_dict(self):
+        return {
+            'object': Game_Object.APPLE,
+            'coords': self.pos(),
+            'direction': None
+        }
