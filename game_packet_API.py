@@ -3,12 +3,15 @@ from dataclasses import dataclass
 
 
 class Game_Packet_Type(str, Enum):
-    RECIEVE_SPRITES_REQUEST = 'recieve sprites request'
+    GAME_STATUS_REQUEST = 'recieve sprites request'
     PLAYER_INPUTS = 'player inputs'
 
-    SPRITES_TO_RENDER = 'sprites to render'
+    GAME_STATUS = 'sprites to render'
     DONE_SENDING = 'done sending'
     START_GAME = 'start game'
+    PLAYER_LOST = 'player lost'
+    PLAYER_WON = 'player won'
+    GAME_DONE = 'game done'
 
     STANDARD_DATA = 'standard data'
 

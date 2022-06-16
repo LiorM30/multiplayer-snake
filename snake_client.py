@@ -9,6 +9,7 @@ from enums import Direction, Game_Object, Player_Command, Color
 from game_packet_API import Game_Packet, Game_Packet_Type
 from snake_config import Snake_Config as Config
 from assets.loaded_images import Loaded_Images
+from on_screen_text import On_Screen_Input
 
 
 class Snake_Client:
@@ -39,22 +40,9 @@ class Snake_Client:
         self._logger = logging.getLogger()
 
         #  -------------------
-        self._logger.debug('started')
         self.client_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_sock.connect((self._args.server_ip, server_port))
         self._logger.debug('Connected to server')
-
-        self._username = input('enter your username:  ')
-        self._send_data(
-            Game_Packet(
-                type=Game_Packet_Type.STANDARD_DATA,
-                data={'username': self._username}
-            )
-        )
-
-        while self._recieve_packet()['type'] != Game_Packet_Type.START_GAME:
-            pass
-
         #  -------------------
 
         pygame.init()
@@ -70,11 +58,31 @@ class Snake_Client:
         self.image_loader = Loaded_Images()
         self.all_images = self.image_loader.all
 
+        self.game_keyboard = On_Screen_Input(self._screen)
+
         self._running = True
+        self._game_is_done = False
+        self._game_started = False
+        self._player_won = False
 
         self._all_sprites = self.image_loader.all
 
-        self.sprites_to_load = {}
+        self._username = self.game_keyboard.get_input(
+            length=10,
+            color=Color.WHITE,
+            x=int(Config.SCREEN_WIDTH / 2),
+            y=int(Config.SCREEN_HEIGHT / 2),
+            title_text='enter username:',
+            BG_color=Color.BLACK
+        )
+        print(self._username)
+
+        self._send_data(
+            Game_Packet(
+                type=Game_Packet_Type.STANDARD_DATA,
+                data={'username': self._username}
+            )
+        )
 
     def _drawGrid(self) -> None:
         """
@@ -92,52 +100,93 @@ class Snake_Client:
         The mainloop of the program, call to start it
         """
         # creating custom events names
-        DRAW_SNAKE = pygame.USEREVENT + 1
+        UPDATE_GAME = pygame.USEREVENT + 1
         # setting event times
-        pygame.time.set_timer(DRAW_SNAKE, Config.TIME_BETWEEN_SNAKE_UPDATES * 2)
+        pygame.time.set_timer(UPDATE_GAME, Config.TIME_BETWEEN_SNAKE_UPDATES)
         while self._running:
             inputs = {  # all command types
                 'change dir': None,
                 'status': None
             }
             self._clock.tick(20)  # setting game FPS
-            # sleep(1/30)
 
             for event in pygame.event.get():
-                # this one checks for the window being closed
+                # checks for the window being closed
                 if event.type == pygame.QUIT:
                     inputs['status'] = Player_Command.QUIT
                     pygame.quit()
-                elif event.type == DRAW_SNAKE:
-                    self._request_sprites()
-                    self._screen.fill((0, 0, 0))
-                    self._drawGrid()
-                    self._render_sprites(self.sprites_to_load)
+                    self._running = False
+                elif event.type == UPDATE_GAME:
+                    if not self._game_started:
+                        self._screen.fill(Color.BLACK.value)
+                        self._drawGrid()
+                    elif self._game_is_done:
+                        if self._player_won:
+                            self.game_keyboard.render_text(
+                                'you won!', Color.WHITE,
+                                Config.SCREEN_HEIGHT / 2, Config.SCREEN_WIDTH / 2
+                            )
+                        else:
+                            self.game_keyboard.render_text(
+                                'you lost!', Color.WHITE,
+                                Config.SCREEN_HEIGHT / 2, Config.SCREEN_WIDTH / 2
+                            )
+                    else:
+                        game_state_pack = self._get_game_state()
+                        sprites_to_load = game_state_pack['data']['sprites']
+                        player_state = game_state_pack['data']['player state']
+                        game_state = game_state_pack['data']['game state']
 
-                if event.type == pygame.KEYDOWN:  # key-press events
+                        self._screen.fill(Color.BLACK.value)
+                        if game_state == Game_Packet_Type.GAME_DONE:
+                            self._game_is_done = True
+                            if player_state == Game_Packet_Type.PLAYER_WON:
+                                self._player_won = True
+                                self.game_keyboard.render_text(
+                                    'you won!', Color.WHITE,
+                                    Config.SCREEN_HEIGHT / 2, Config.SCREEN_WIDTH / 2
+                                )
+                            elif player_state == Game_Packet_Type.PLAYER_LOST:
+                                self.game_keyboard.render_text(
+                                    'you lost!', Color.WHITE,
+                                    Config.SCREEN_HEIGHT / 2, Config.SCREEN_WIDTH / 2
+                                )
+                        else:
+                            self._drawGrid()
+                            self._render_sprites(sprites_to_load)
+
+                    pygame.display.flip()
+
+                elif event.type == pygame.KEYDOWN:  # key-press events
                     match event.key:
-                        case pygame.K_a:
+                        case pygame.K_a | pygame.K_LEFT:
                             inputs['change dir'] = Player_Command.MOVE_LEFT
-                        case pygame.K_d:
+                        case pygame.K_d | pygame.K_RIGHT:
                             inputs['change dir'] = Player_Command.MOVE_RIGHT
-                        case pygame.K_w:
+                        case pygame.K_w | pygame.K_UP:
                             inputs['change dir'] = Player_Command.MOVE_UP
-                        case pygame.K_s:
+                        case pygame.K_s | pygame.K_DOWN:
                             inputs['change dir'] = Player_Command.MOVE_DOWN
                         case pygame.K_ESCAPE:
                             inputs['status'] = Player_Command.QUIT
-
-            if inputs['status'] == Player_Command.QUIT:  # if player quits, stop game
-                self._running = False
-            if not all(value is None for value in inputs.values()):
-                self._send_data(
-                    Game_Packet(
-                        type=Game_Packet_Type.PLAYER_INPUTS,
-                        data=inputs
+            if self._game_started and not self._game_is_done:
+                if inputs['status'] == Player_Command.QUIT:  # if player quits, stop game
+                    self._running = False
+                if not all(value is None for value in inputs.values()):
+                    self._send_data(
+                        Game_Packet(
+                            type=Game_Packet_Type.PLAYER_INPUTS,
+                            data=inputs
+                        )
                     )
-                )
-
-            pygame.display.flip()
+            if not self._game_started:
+                self.client_sock.settimeout(0.1)
+                try:
+                    if self._recieve_packet()['type'] == Game_Packet_Type.START_GAME:
+                        self._game_started = True
+                except socket.timeout:
+                    pass
+                self.client_sock.settimeout(None)
 
     def _send_data(self, data: Game_Packet) -> None:
         """
@@ -158,7 +207,8 @@ class Snake_Client:
         """
 
         for sprite in sprites:
-            self._draw_object(sprite['object'], sprite['coords'], sprite['direction'])
+            self._draw_object(sprite['object'],
+                              sprite['coords'], sprite['direction'])
 
     def _draw_object(self, object: Game_Object, coords: tuple[int, int], direction: Direction) -> None:
         """
@@ -204,7 +254,7 @@ class Snake_Client:
 
         # self._screen.blit(self._all_sprites[object], coords)
 
-    def _request_sprites(self) -> None:
+    def _get_game_state(self) -> Game_Packet:
         """
         Sends the server a request for it to send the sprites to render
         puts those sprites in the sprites_to_load variable
@@ -212,11 +262,11 @@ class Snake_Client:
         # print('sending sprites request')
         self._send_data(
             Game_Packet(
-                type=Game_Packet_Type.RECIEVE_SPRITES_REQUEST
+                type=Game_Packet_Type.GAME_STATUS_REQUEST
             )
         )
 
-        self.sprites_to_load = self._recieve_packet()['data']
+        return self._recieve_packet()
 
     def _recieve_packet(self) -> Game_Packet:
         full_data = self.client_sock.recv(1024).decode()

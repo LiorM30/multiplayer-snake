@@ -4,38 +4,6 @@ from enums import Direction, Game_Object, Snake_Part, Color
 from snake_config import Snake_Config as Config
 
 
-class Player(pygame.sprite.Sprite):
-    def __init__(self, ID: int, coords: tuple[int, int]) -> None:
-        super().__init__()
-
-        self._ID = ID
-        self._coords = coords
-
-        self._image = pygame.Surface((50, 50))
-        self._image.fill((255, 255, 255))
-        self.rect = self._image.get_rect()
-        self.rect.center = coords
-
-        self._x_speed = 0  # the sprite's movement speeds
-        self._y_speed = 0
-
-    def update(self):
-        self._move()
-
-    def _move(self):
-        self.rect.y += self._y_speed
-        self.rect.x += self._x_speed
-
-    def change_y_speed(self, speed):
-        self._y_speed += speed
-
-    def change_x_speed(self, speed):
-        self._x_speed += speed
-
-    def get_coords(self) -> tuple[int, int]:
-        return (self.rect.x, self.rect.y)
-
-
 class Snake_Body(pygame.sprite.Sprite):
     def __init__(
         self,
@@ -62,23 +30,18 @@ class Snake_Body(pygame.sprite.Sprite):
 
         self.direction = direction
 
-        self.explosion_sprites = self.all_images[Game_Object.EXPLOSION]
-        self.explode_frame = 0
-        self.is_exploding = False
         self.current_rotation = 0  # pointing up
         self.set_direction(direction)
 
         self._layer = self.rect.bottom
 
     def update(self):
-        if self.is_exploding:
-            self.explode()
-        else:
-            self.move()
+        self.move()
 
     def move(self) -> None:
         """
         Moves the sprite according to its direction
+        It takes 10 calls to move one tile
         """
 
         match self.direction:
@@ -181,24 +144,6 @@ class Snake_Body(pygame.sprite.Sprite):
         """
 
         return self.rect.collidepoint(coords)
-
-    def explode(self) -> None:
-        """
-        Makes the sprite go BOOM, should be called untill the sprite is killed
-        """
-
-        if not self.is_exploding:
-            self.rect.y -= Config.TILE_HEIGHT
-            self.rect.x -= Config.TILE_WIDTH / 2
-            self.is_exploding = True
-        if self.explode_frame > len(self.explosion_sprites) - 1:
-            self.kill()
-        else:
-            self.image = self.explosion_sprites[self.explode_frame]
-            self.image = pygame.transform.scale(
-                self.image, (Config.TILE_WIDTH * 2, Config.TILE_HEIGHT * 2)
-            )
-            self.explode_frame += 1
 
     def change_costume(self, new_costume: Snake_Part) -> None:
         """

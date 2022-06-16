@@ -39,19 +39,9 @@ class Loaded_Images:
             self.apple, (Config.TILE_WIDTH, Config.TILE_HEIGHT)
         )
 
-        # explosion
-        self.explosion_frames = []
-        for file in os.listdir(Config.EXPLOSION_DIRECTORY):
-            frame = os.path.join(Config.EXPLOSION_DIRECTORY, file)
-            to_add = pygame.image.load(frame).convert()
-            to_add.set_colorkey((0, 252, 0))
-            # to_add.set_alpha(128)
-            self.explosion_frames.append(to_add)
-
         self.all = {
             Game_Object.SNAKE_HEAD: self.snake_head,
             Game_Object.SNAKE_BODY: self.snake_body,
             Game_Object.SNAKE_TAIL: self.snake_tail,
             Game_Object.APPLE: self.apple,
-            Game_Object.EXPLOSION: self.explosion_frames
         }

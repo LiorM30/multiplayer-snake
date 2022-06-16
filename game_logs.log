@@ -1,436 +1,71 @@
-[13-06-2022 15:52:43.111] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 15:53:19.109] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 15:54:07.597] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 15:57:06.421] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 15:57:06.421] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 15:57:10.820] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 15:58:43.651] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 15:58:43.651] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 15:58:45.740] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 15:58:45.740] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 15:58:48.582] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 15:58:48.582] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:01:01.004] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:01:01.004] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:01:02.972] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:01:02.972] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:01:03.916] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:01:03.916] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:01:54.377] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:01:54.377] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:01:55.980] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:01:55.981] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:01:56.924] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:01:56.924] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:03:28.010] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:03:28.010] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:03:29.637] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:03:29.637] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:03:30.675] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:03:30.675] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:03:44.890] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:03:44.890] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:03:46.771] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:03:46.771] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:03:47.404] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:03:47.404] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:04:08.397] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:04:08.397] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:04:09.953] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:04:09.954] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:04:10.850] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:04:10.851] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:04:38.811] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:04:38.812] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:04:40.449] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:04:40.449] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:04:41.763] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:04:41.764] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:04:43.544] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:05:36.246] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:05:36.246] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:05:38.470] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:05:38.470] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:05:39.988] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:05:39.988] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:05:40.561] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:06:20.828] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:06:20.829] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:06:22.450] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:06:22.451] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:06:23.412] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:06:23.412] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:06:23.606] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:06:44.603] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 16:08:07.544] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:08:07.544] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:08:09.000] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:08:09.000] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:08:09.811] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:08:09.811] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:08:10.606] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:08:28.215] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 16:10:14.198] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:10:14.198] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:10:16.071] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:10:16.072] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:10:17.811] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:10:17.812] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:10:18.005] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:10:31.361] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 16:11:01.205] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:11:01.205] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:11:02.840] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:11:02.840] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:11:03.962] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:11:03.963] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:11:08.555] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:11:15.782] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 16:12:02.831] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:12:02.831] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:12:04.582] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:12:04.583] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:12:06.139] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:12:06.139] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:12:06.630] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:12:14.928] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 16:13:33.106] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:13:33.107] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:13:34.718] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:13:34.718] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:13:35.642] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:13:35.642] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:13:36.621] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:13:38.520] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 16:56:42.679] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:56:42.679] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:56:46.874] [DEBUG] [snake_client] [__init__]: started
-[13-06-2022 16:56:46.874] [DEBUG] [snake_client] [__init__]: Connected to server
-[13-06-2022 16:56:48.310] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:56:48.311] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:56:48.661] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 16:58:23.723] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 16:59:42.966] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 16:59:42.966] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 16:59:58.197] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 16:59:58.197] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 16:59:58.650] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:01:16.062] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 17:23:37.500] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:23:37.500] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:23:41.018] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:23:41.019] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:23:41.252] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:29:09.670] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:29:09.670] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:29:12.267] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:29:12.268] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:29:12.475] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:29:58.248] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:29:58.248] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:30:00.747] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:30:00.747] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:30:00.950] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:30:29.201] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:30:29.201] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:30:32.490] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:30:32.490] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:30:32.693] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:31:18.160] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:31:18.160] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:31:22.506] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:31:22.507] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:31:22.716] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:32:22.544] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:32:22.544] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:32:24.850] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:32:24.850] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:32:25.056] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:33:11.117] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:33:11.117] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:33:14.769] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:33:14.770] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:33:14.984] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:33:44.074] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:33:44.074] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:33:46.434] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:33:46.434] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:33:46.643] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:35:13.644] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:35:13.644] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:35:16.217] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:35:16.218] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:35:16.424] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:37:30.840] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:37:30.840] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:37:33.321] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:37:33.322] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:37:33.537] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:37:59.856] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:37:59.856] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:38:02.539] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:38:02.539] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:38:02.743] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:39:25.672] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:39:25.672] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:39:28.387] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:39:28.387] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:39:28.589] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:39:58.047] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:39:58.047] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:40:00.873] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:40:00.874] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:40:01.077] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:40:22.238] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 17:42:52.217] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:42:52.217] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:42:57.849] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 17:42:57.849] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:42:58.060] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:43:24.737] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 17:47:03.212] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 17:47:03.212] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 17:47:06.152] [DEBUG] [snake_server] [_get_clients]: Client lkior connected
-[13-06-2022 17:47:06.152] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 17:47:06.342] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 17:47:32.081] [DEBUG] [snake_server] [_handle_player]: Player lkior has disconnected
-[13-06-2022 22:05:21.567] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 22:05:21.567] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 22:05:24.620] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 22:05:24.620] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 22:05:25.213] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 22:05:34.987] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[13-06-2022 22:05:51.434] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 22:05:51.434] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 22:05:54.316] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 22:05:54.316] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 22:05:56.209] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 22:06:15.697] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 22:07:01.554] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 22:07:01.554] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 22:07:05.028] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 22:07:05.028] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 22:07:06.211] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 22:07:29.895] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[13-06-2022 23:05:27.268] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 23:05:27.268] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 23:05:58.790] [DEBUG] [snake_server] [__init__]: Server is up and running
-[13-06-2022 23:05:58.790] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 23:06:16.206] [DEBUG] [snake_server] [_get_clients]: Client mor connected
-[13-06-2022 23:06:16.207] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[13-06-2022 23:06:16.207] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[13-06-2022 23:06:16.207] [DEBUG] [snake_server] [__init__]: Got all clients
-[13-06-2022 23:06:16.399] [DEBUG] [snake_server] [mainloop]: In mainloop
-[13-06-2022 23:06:33.324] [DEBUG] [snake_server] [_handle_player]: Player mor has disconnected
-[13-06-2022 23:06:33.340] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[14-06-2022 20:26:33.696] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:26:33.696] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:26:45.882] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:26:45.883] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:26:48.039] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:26:48.039] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:28:46.070] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:28:46.071] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:28:48.015] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:28:48.015] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:28:49.784] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:28:49.784] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:28:50.036] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:29:08.736] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:29:08.736] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:29:11.470] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:29:11.470] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:29:13.127] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:29:13.128] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:29:13.321] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:29:32.708] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:29:32.709] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:29:34.312] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:29:34.312] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:29:35.104] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:29:35.104] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:29:35.294] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:29:45.644] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[14-06-2022 20:29:58.987] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:29:58.987] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:30:00.591] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:30:00.592] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:30:01.569] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:30:01.569] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:30:01.760] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:30:37.989] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:30:37.989] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:30:39.813] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:30:39.813] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:30:40.536] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:30:40.537] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:30:40.728] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:30:58.532] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:30:58.533] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:31:00.429] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:31:00.429] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:31:01.296] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:31:01.297] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:31:01.490] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:31:39.925] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:31:39.925] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:31:41.483] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:31:41.483] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:31:42.296] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:31:42.297] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:31:42.487] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:34:46.455] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:34:46.455] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:34:48.048] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:34:48.048] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:34:48.600] [DEBUG] [snake_server] [_get_clients]: Client l connected
-[14-06-2022 20:34:48.600] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:34:48.796] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:35:15.402] [DEBUG] [snake_server] [_handle_player]: Player l has disconnected
-[14-06-2022 20:50:05.166] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:50:05.166] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:50:07.419] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:50:07.420] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:50:08.632] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:50:08.632] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:50:08.829] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:50:22.612] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:50:22.612] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:50:24.527] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:50:24.527] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:50:25.904] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:50:25.904] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:50:26.093] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:50:34.059] [DEBUG] [snake_server] [_handle_player]: Player lior has disconnected
-[14-06-2022 20:50:42.569] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:50:42.569] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:50:44.283] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:50:44.284] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:50:45.073] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:50:45.073] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:50:45.270] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:51:26.612] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[14-06-2022 20:53:52.234] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:53:52.234] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:53:55.373] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:53:55.373] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:53:56.193] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:53:56.193] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:53:56.388] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:54:02.632] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[14-06-2022 20:54:06.137] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:54:06.137] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:54:08.416] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:54:08.417] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:54:10.057] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:54:10.057] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:54:10.249] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:54:14.334] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[14-06-2022 20:54:22.318] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 20:54:22.318] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 20:54:24.088] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 20:54:24.088] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 20:54:25.002] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 20:54:25.002] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 20:54:25.192] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 20:55:45.929] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[14-06-2022 21:00:36.056] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:00:36.056] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:00:37.887] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:00:37.887] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:00:39.089] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:00:39.089] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:03:25.365] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:03:25.365] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:03:28.465] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:03:28.465] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:03:29.673] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:03:29.674] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:03:29.864] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:04:38.574] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:04:38.574] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:04:40.304] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:04:40.305] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:04:41.657] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:04:41.657] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:04:41.848] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:06:29.822] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:06:29.823] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:06:31.591] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:06:31.592] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:06:33.162] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:06:33.162] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:07:29.770] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:07:29.770] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:07:35.130] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:07:35.130] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:07:35.817] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:07:35.818] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:07:36.010] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:08:56.876] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:08:56.876] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:09:00.984] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:09:00.984] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:09:02.065] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:09:02.065] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:09:02.257] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:10:18.238] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:10:18.238] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:10:20.010] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:10:20.011] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:10:21.313] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:10:21.313] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:10:21.505] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:15:14.156] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:15:14.157] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:15:15.911] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:15:15.911] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:15:17.368] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:15:17.369] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:15:17.562] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:16:42.198] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:16:42.198] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:16:43.873] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:16:43.873] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:16:44.353] [DEBUG] [snake_server] [_get_clients]: Client l connected
-[14-06-2022 21:16:44.353] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:16:44.545] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:16:50.553] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: l
-[14-06-2022 21:17:21.672] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:17:21.672] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:17:23.291] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:17:23.292] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:17:24.001] [DEBUG] [snake_server] [_get_clients]: Client l connected
-[14-06-2022 21:17:24.001] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:17:24.196] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:17:54.865] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:17:54.865] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:17:56.557] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:17:56.558] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:17:56.961] [DEBUG] [snake_server] [_get_clients]: Client l connected
-[14-06-2022 21:17:56.962] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:17:57.154] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:18:20.894] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:18:20.894] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:18:23.228] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:18:23.229] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:18:24.722] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:18:24.723] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:18:24.912] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:19:50.891] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
-[14-06-2022 21:20:17.965] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:20:17.965] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:20:20.879] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:20:20.880] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:20:21.377] [DEBUG] [snake_server] [_get_clients]: Client l connected
-[14-06-2022 21:20:21.378] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:20:21.570] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:20:49.316] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: l
-[14-06-2022 21:21:27.053] [DEBUG] [snake_server] [__init__]: Server is up and running
-[14-06-2022 21:21:27.053] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[14-06-2022 21:21:28.820] [DEBUG] [snake_client] [__init__]: started
-[14-06-2022 21:21:28.820] [DEBUG] [snake_client] [__init__]: Connected to server
-[14-06-2022 21:21:29.569] [DEBUG] [snake_server] [_get_clients]: Client lior connected
-[14-06-2022 21:21:29.570] [DEBUG] [snake_server] [__init__]: Got all clients
-[14-06-2022 21:21:29.761] [DEBUG] [snake_server] [mainloop]: In mainloop
-[14-06-2022 21:22:21.110] [DEBUG] [snake_server] [_handle_player]: Client disconnected, name: lior
+[15-06-2022 23:42:22.647] [DEBUG] [snake_server] [__init__]: Server is up and running
+[15-06-2022 23:42:22.647] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[15-06-2022 23:42:24.393] [DEBUG] [snake_client] [__init__]: Connected to server
+[15-06-2022 23:42:25.807] [DEBUG] [snake_server] [_get_clients]: Client LIOR connected
+[15-06-2022 23:42:25.807] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[15-06-2022 23:42:56.353] [DEBUG] [snake_client] [__init__]: Connected to server
+[15-06-2022 23:42:59.959] [DEBUG] [snake_server] [_get_clients]: Client MOR connected
+[15-06-2022 23:42:59.960] [DEBUG] [snake_server] [__init__]: Got all clients
+[15-06-2022 23:43:00.070] [DEBUG] [snake_server] [mainloop]: In mainloop
+[15-06-2022 23:45:49.689] [DEBUG] [snake_server] [__init__]: Server is up and running
+[15-06-2022 23:45:49.689] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[15-06-2022 23:45:51.617] [DEBUG] [snake_client] [__init__]: Connected to server
+[15-06-2022 23:45:52.351] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[15-06-2022 23:45:52.352] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[15-06-2022 23:45:58.785] [DEBUG] [snake_client] [__init__]: Connected to server
+[15-06-2022 23:46:00.359] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[15-06-2022 23:46:00.359] [DEBUG] [snake_server] [__init__]: Got all clients
+[15-06-2022 23:46:00.467] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 00:14:44.569] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 00:14:44.569] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:14:45.948] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:14:47.376] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 00:14:47.376] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:14:51.832] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:14:52.744] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 00:14:52.744] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 00:14:52.854] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 00:14:54.070] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
+[16-06-2022 00:14:54.086] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
+[16-06-2022 00:16:11.851] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 00:16:11.851] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:16:13.683] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:16:14.840] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 00:16:14.840] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:16:16.860] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:16:17.825] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 00:16:17.825] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 00:16:17.932] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 00:16:19.153] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
+[16-06-2022 00:16:19.154] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
+[16-06-2022 00:16:56.233] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 00:16:56.233] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:16:58.075] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:16:59.016] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 00:16:59.016] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:17:01.394] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:17:02.408] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 00:17:02.408] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 00:17:02.515] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 00:17:04.229] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
+[16-06-2022 00:17:04.231] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
+[16-06-2022 00:17:18.761] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 00:17:18.761] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:17:20.344] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:17:21.048] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 00:17:21.048] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:17:24.599] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:17:25.144] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 00:17:25.145] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 00:17:25.253] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 00:17:26.967] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
+[16-06-2022 00:17:26.976] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
+[16-06-2022 00:19:55.649] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 00:19:55.650] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:19:57.417] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:19:58.040] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 00:19:58.041] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 00:20:01.418] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 00:20:02.504] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 00:20:02.504] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 00:20:02.613] [DEBUG] [snake_server] [mainloop]: In mainloop
