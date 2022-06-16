@@ -9,7 +9,7 @@ from enums import Direction, Game_Object, Player_Command, Color, \
     Player_State, Game_State
 from game_packet_API import Game_Packet, Game_Packet_Type
 from snake_config import Snake_Config as Config
-from assets.loaded_images import Loaded_Images
+from loaded_images import Loaded_Images
 from on_screen_text import On_Screen_Input
 
 
@@ -69,7 +69,7 @@ class Snake_Client:
             title_text='enter username:',
             BG_color=Color.BLACK
         )
-        print(self._username)
+        self._logger.debug(f'Username: {self._username}')
 
         self._send_data(
             Game_Packet(
@@ -207,8 +207,13 @@ class Snake_Client:
                         )
                     )
             if not self._game_started:
-                if self._recieve_packet().type == Game_Packet_Type.START_GAME:
-                    self._game_started = True
+                self.client_sock.settimeout(0.01)
+                try:
+                    if self._recieve_packet().type == Game_Packet_Type.START_GAME:
+                        self._game_started = True
+                except socket.timeout:
+                    pass
+                self.client_sock.settimeout(None)
 
     def _send_data(self, data: Game_Packet) -> None:
         """
@@ -274,7 +279,6 @@ class Snake_Client:
                 type=Game_Packet_Type.GAME_STATUS_REQUEST
             )
         )
-
         return self._recieve_packet()
 
     def _recieve_packet(self) -> Game_Packet:
