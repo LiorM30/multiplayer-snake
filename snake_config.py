@@ -1,3 +1,4 @@
+from unittest.mock import DEFAULT
 from enums import Color
 
 
@@ -13,8 +14,7 @@ class Snake_Config:
     GAME_NAME = "Snake"
     GAME_SPEED = 150  # milliseconds,time it takes for the snake to move a tile
     TIME_BETWEEN_SNAKE_UPDATES = int(GAME_SPEED / 10)
-    EXPLOSION_DIRECTORY = 'assets\\images\\explosion\\'
     SNAKE_PARTS_DIRECTORY = 'assets\\images\\snake parts\\'
     APPLE_IMAGE_PATH = 'assets\\images\\apple.png'
-    EXPLOTION_COLOR_KEY = (0, 252, 0)
-    SCORES_FILE_PATH = 'assets\\scores.json'
+    DEFAULT_SNAKE_COLOR = (48, 216, 238)
+    SNAKE_COLORS = (Color.CYAN, Color.GREEN, Color.YELLOW, Color.FUCHSIA)

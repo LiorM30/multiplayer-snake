@@ -1,71 +1,506 @@
-[15-06-2022 23:42:22.647] [DEBUG] [snake_server] [__init__]: Server is up and running
-[15-06-2022 23:42:22.647] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[15-06-2022 23:42:24.393] [DEBUG] [snake_client] [__init__]: Connected to server
-[15-06-2022 23:42:25.807] [DEBUG] [snake_server] [_get_clients]: Client LIOR connected
-[15-06-2022 23:42:25.807] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[15-06-2022 23:42:56.353] [DEBUG] [snake_client] [__init__]: Connected to server
-[15-06-2022 23:42:59.959] [DEBUG] [snake_server] [_get_clients]: Client MOR connected
-[15-06-2022 23:42:59.960] [DEBUG] [snake_server] [__init__]: Got all clients
-[15-06-2022 23:43:00.070] [DEBUG] [snake_server] [mainloop]: In mainloop
-[15-06-2022 23:45:49.689] [DEBUG] [snake_server] [__init__]: Server is up and running
-[15-06-2022 23:45:49.689] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[15-06-2022 23:45:51.617] [DEBUG] [snake_client] [__init__]: Connected to server
-[15-06-2022 23:45:52.351] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[15-06-2022 23:45:52.352] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[15-06-2022 23:45:58.785] [DEBUG] [snake_client] [__init__]: Connected to server
-[15-06-2022 23:46:00.359] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[15-06-2022 23:46:00.359] [DEBUG] [snake_server] [__init__]: Got all clients
-[15-06-2022 23:46:00.467] [DEBUG] [snake_server] [mainloop]: In mainloop
-[16-06-2022 00:14:44.569] [DEBUG] [snake_server] [__init__]: Server is up and running
-[16-06-2022 00:14:44.569] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:14:45.948] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:14:47.376] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[16-06-2022 00:14:47.376] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:14:51.832] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:14:52.744] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[16-06-2022 00:14:52.744] [DEBUG] [snake_server] [__init__]: Got all clients
-[16-06-2022 00:14:52.854] [DEBUG] [snake_server] [mainloop]: In mainloop
-[16-06-2022 00:14:54.070] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
-[16-06-2022 00:14:54.086] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
-[16-06-2022 00:16:11.851] [DEBUG] [snake_server] [__init__]: Server is up and running
-[16-06-2022 00:16:11.851] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:16:13.683] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:16:14.840] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[16-06-2022 00:16:14.840] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:16:16.860] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:16:17.825] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[16-06-2022 00:16:17.825] [DEBUG] [snake_server] [__init__]: Got all clients
-[16-06-2022 00:16:17.932] [DEBUG] [snake_server] [mainloop]: In mainloop
-[16-06-2022 00:16:19.153] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
-[16-06-2022 00:16:19.154] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
-[16-06-2022 00:16:56.233] [DEBUG] [snake_server] [__init__]: Server is up and running
-[16-06-2022 00:16:56.233] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:16:58.075] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:16:59.016] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[16-06-2022 00:16:59.016] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:17:01.394] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:17:02.408] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[16-06-2022 00:17:02.408] [DEBUG] [snake_server] [__init__]: Got all clients
-[16-06-2022 00:17:02.515] [DEBUG] [snake_server] [mainloop]: In mainloop
-[16-06-2022 00:17:04.229] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
-[16-06-2022 00:17:04.231] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
-[16-06-2022 00:17:18.761] [DEBUG] [snake_server] [__init__]: Server is up and running
-[16-06-2022 00:17:18.761] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:17:20.344] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:17:21.048] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[16-06-2022 00:17:21.048] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:17:24.599] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:17:25.144] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[16-06-2022 00:17:25.145] [DEBUG] [snake_server] [__init__]: Got all clients
-[16-06-2022 00:17:25.253] [DEBUG] [snake_server] [mainloop]: In mainloop
-[16-06-2022 00:17:26.967] [DEBUG] [snake_server] [_handle_player]: Closed connection with M
-[16-06-2022 00:17:26.976] [DEBUG] [snake_server] [_handle_player]: Closed connection with L
-[16-06-2022 00:19:55.649] [DEBUG] [snake_server] [__init__]: Server is up and running
-[16-06-2022 00:19:55.650] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:19:57.417] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:19:58.040] [DEBUG] [snake_server] [_get_clients]: Client L connected
-[16-06-2022 00:19:58.041] [DEBUG] [snake_server] [_get_clients]: Listening for clients
-[16-06-2022 00:20:01.418] [DEBUG] [snake_client] [__init__]: Connected to server
-[16-06-2022 00:20:02.504] [DEBUG] [snake_server] [_get_clients]: Client M connected
-[16-06-2022 00:20:02.504] [DEBUG] [snake_server] [__init__]: Got all clients
-[16-06-2022 00:20:02.613] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:41:26.356] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected unexpectedly
+[16-06-2022 14:41:29.265] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:41:29.265] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:41:30.812] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:41:31.775] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:41:31.776] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:41:31.786] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:41:31.787] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:42:01.959] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:42:01.960] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:42:04.671] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:42:06.050] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:42:06.051] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:42:06.061] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:42:06.062] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:42:06.065] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:42:08.304] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:42:09.338] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:42:09.339] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:42:09.350] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:42:09.350] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:42:09.355] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:42:09.748] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:42:09.748] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:42:09.775] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:42:48.994] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:42:48.994] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:42:50.787] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:42:52.006] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:42:52.007] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:42:52.017] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:42:52.018] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:42:52.022] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:42:54.062] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:42:54.969] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:42:54.969] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:42:54.981] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:42:54.981] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:42:54.986] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:42:55.389] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:42:55.389] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:42:55.413] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:43:09.551] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected unexpectedly
+[16-06-2022 14:43:10.726] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected unexpectedly
+[16-06-2022 14:45:06.449] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:45:06.450] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:45:09.136] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:45:10.927] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:45:10.927] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:45:10.938] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:45:10.938] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:45:10.943] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:45:13.082] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:45:14.188] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:45:14.189] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:45:14.200] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:45:14.200] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:45:14.203] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:45:14.590] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:45:14.608] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:45:14.620] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:46:13.999] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:46:13.999] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:46:15.710] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:46:16.917] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:46:16.918] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:46:16.928] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:46:16.930] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:46:16.934] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:46:18.977] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:46:19.901] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:46:19.902] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:46:19.913] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:46:19.915] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:46:19.918] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:46:20.299] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:46:20.306] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:46:20.323] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:49:20.404] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:49:20.405] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:49:22.642] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:49:23.789] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:49:23.790] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:49:23.800] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:49:23.802] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:49:23.805] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:49:25.743] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:49:26.658] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:49:26.659] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:49:26.669] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:49:26.669] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:49:26.673] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:49:27.089] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:49:27.090] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:49:27.117] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 14:59:46.317] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 14:59:46.317] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:59:48.573] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:59:49.615] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 14:59:49.615] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 14:59:49.625] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 14:59:49.626] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 14:59:49.629] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:59:51.589] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 14:59:52.483] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 14:59:52.484] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 14:59:52.495] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 14:59:52.495] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 14:59:52.498] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 14:59:52.889] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 14:59:52.900] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 14:59:52.912] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:00:15.197] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:00:15.198] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:00:16.832] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:00:17.411] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:00:17.411] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:00:17.422] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:00:17.422] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:00:17.424] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:00:19.406] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:00:20.337] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:00:20.339] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:00:20.349] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:00:20.350] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:00:20.354] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:00:20.744] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:00:20.745] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:00:20.762] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:01:45.664] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:01:45.667] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:01:47.310] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:01:48.259] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:01:48.260] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:01:48.270] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:01:48.270] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:01:48.274] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:01:50.210] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:01:51.120] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:01:51.121] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:01:51.131] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:01:51.132] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:01:51.136] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:01:51.517] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:01:51.524] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:01:51.530] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:02:49.359] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:02:49.360] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:02:52.172] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:02:53.363] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:02:53.363] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:02:53.374] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:02:53.375] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:02:53.379] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:02:55.348] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:02:56.390] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:02:56.391] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:02:56.401] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:02:56.401] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:02:56.405] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:02:56.801] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:02:56.819] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:02:56.831] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:03:49.431] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:03:49.432] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:03:51.227] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:03:52.774] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:03:52.775] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:03:52.786] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:03:52.787] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:03:52.790] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:03:55.120] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:03:56.063] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:03:56.064] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:03:56.075] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:03:56.075] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:03:56.079] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:03:56.474] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:03:56.476] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:03:56.482] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:04:24.761] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:04:24.761] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:04:26.319] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:04:27.790] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:04:27.792] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:04:27.802] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:04:27.803] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:04:27.806] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:04:30.041] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:04:31.060] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:04:31.060] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:04:31.071] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:04:31.071] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:04:31.077] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:04:31.455] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:04:31.464] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:04:31.471] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:05:24.866] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:05:24.866] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:05:26.562] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:05:27.662] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:05:27.664] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:05:27.675] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:05:27.675] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:05:27.677] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:05:30.931] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:05:31.699] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:05:31.700] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:05:31.711] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:05:31.711] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:05:31.715] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:05:32.111] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:05:32.113] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:05:32.120] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:05:54.727] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:05:54.727] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:05:56.659] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:05:58.075] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:05:58.076] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:05:58.086] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:05:58.086] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:05:58.089] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:05:59.923] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:06:03.000] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:06:03.001] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:06:03.012] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:06:03.012] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:06:03.017] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:06:03.480] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:06:03.481] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:06:03.486] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 15:06:44.476] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 15:06:46.492] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected
+[16-06-2022 15:06:51.423] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 15:06:51.424] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:06:53.002] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:06:53.902] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 15:06:53.902] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 15:06:53.913] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 15:06:53.913] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 15:06:53.918] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:06:56.619] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 15:06:58.667] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 15:06:58.668] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 15:06:58.679] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 15:06:58.679] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 15:06:58.683] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 15:06:59.058] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 15:06:59.060] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 15:06:59.065] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:33:08.265] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:33:08.267] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:33:10.411] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:33:11.827] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:33:11.828] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:33:11.839] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:33:11.840] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:33:11.845] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:33:15.560] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:33:17.272] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:33:17.274] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:33:17.284] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:33:17.285] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:33:17.289] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:37:23.717] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:37:23.718] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:37:26.008] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:37:27.271] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:37:58.784] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:37:58.784] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:38:00.766] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:38:02.165] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:38:02.166] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:38:02.176] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:38:02.176] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:38:02.182] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:38:05.576] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:38:07.146] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:38:07.147] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:38:07.158] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:38:07.158] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:38:07.164] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:38:07.523] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:38:07.531] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:38:07.543] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:42:34.565] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected unexpectedly
+[16-06-2022 18:42:35.728] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected unexpectedly
+[16-06-2022 18:42:37.753] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:42:37.753] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:42:39.702] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:42:41.146] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:42:41.147] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:42:41.157] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:42:41.157] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:42:41.161] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:42:43.303] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:42:44.265] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:42:44.266] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:42:44.277] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:42:44.277] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:42:44.282] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:42:44.755] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:42:44.761] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:42:44.767] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:44:55.837] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected unexpectedly
+[16-06-2022 18:45:01.963] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:45:01.963] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:45:04.544] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:45:05.618] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:45:05.619] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:45:05.630] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:45:05.630] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:45:05.635] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:45:07.845] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:45:08.792] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:45:08.793] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:45:08.803] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:45:08.804] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:45:08.812] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:45:09.296] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:45:09.296] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:45:09.342] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:45:46.082] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:45:46.083] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:45:47.793] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:45:49.503] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:45:49.505] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:45:49.516] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:45:49.516] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:45:49.521] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:45:51.456] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:45:52.366] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:45:52.367] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:45:52.378] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:45:52.378] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:45:52.381] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:45:52.777] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:45:52.788] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:45:52.801] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:46:31.552] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:46:31.553] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:46:34.404] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:46:35.299] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:46:35.300] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:46:35.310] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:46:35.310] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:46:35.314] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:46:37.206] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:46:38.124] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:46:38.125] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:46:38.136] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:46:38.137] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:46:38.144] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:46:38.525] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:46:38.532] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:46:38.539] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:48:17.741] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:48:17.741] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:48:21.632] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:48:24.740] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:48:24.742] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:48:24.752] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 18:48:24.752] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 18:48:24.755] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:48:39.486] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:48:39.486] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:48:45.157] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:48:47.400] [DEBUG] [snake_server] [_get_clients]: Client J connected
+[16-06-2022 18:48:47.401] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:48:47.411] [DEBUG] [snake_client] [__init__]: My ID is 2
+[16-06-2022 18:48:47.411] [DEBUG] [snake_client] [__init__]: My color is [255, 255, 0]
+[16-06-2022 18:48:47.415] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:48:47.874] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:48:47.878] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:48:47.879] [DEBUG] [snake_server] [_handle_player]: Player 2 is ready
+[16-06-2022 18:48:47.907] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:56:06.016] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 18:56:06.016] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:56:16.026] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 18:56:16.027] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 18:56:18.291] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 18:56:20.328] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 18:56:20.329] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 18:56:20.340] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 18:56:20.340] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 18:56:20.347] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 18:56:20.758] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 18:56:20.758] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 18:56:20.780] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 18:56:37.261] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 18:56:47.402] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected
+[16-06-2022 19:06:02.658] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:06:02.659] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:06:04.387] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:06:05.693] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 19:06:05.694] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:06:05.705] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 19:06:05.705] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 19:06:05.711] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:06:07.754] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:06:09.028] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 19:06:09.029] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 19:06:09.039] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 19:06:09.039] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 19:06:09.043] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:06:09.443] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 19:06:09.444] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 19:06:09.455] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 19:06:14.146] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 19:06:21.646] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected
+[16-06-2022 19:08:53.564] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:08:53.565] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:08:55.512] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:08:56.761] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 19:08:56.763] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:08:56.774] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 19:08:56.774] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 19:08:56.777] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:08:58.829] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:08:59.877] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 19:08:59.877] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 19:08:59.888] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 19:08:59.888] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 19:08:59.896] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:09:00.271] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 19:09:00.274] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 19:09:00.279] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 19:09:02.321] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 19:09:10.903] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected
+[16-06-2022 19:10:07.872] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:10:07.873] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:10:18.495] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:10:18.496] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:10:20.321] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:10:21.727] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 19:10:21.727] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:10:21.738] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 19:10:21.739] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 19:10:21.741] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:10:23.825] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:10:25.146] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 19:10:25.147] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 19:10:25.157] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 19:10:25.158] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 19:10:25.162] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:10:25.554] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 19:10:25.555] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 19:10:25.567] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 19:10:53.592] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:10:53.593] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:10:57.239] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:10:59.797] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 19:10:59.799] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:10:59.809] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 19:10:59.809] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 19:10:59.813] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:11:01.950] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:11:03.297] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 19:11:03.298] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 19:11:03.309] [DEBUG] [snake_client] [__init__]: My ID is 1
+[16-06-2022 19:11:03.309] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 0]
+[16-06-2022 19:11:03.312] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:11:03.695] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 19:11:03.701] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 19:11:03.713] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 19:11:05.683] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 19:16:53.108] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 19:16:53.109] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:16:54.920] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 19:16:56.620] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 19:16:56.621] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 19:16:56.632] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 19:16:56.632] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 19:16:56.639] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 19:17:00.058] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 19:17:00.059] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 19:17:00.473] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 19:17:00.474] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 19:17:00.480] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 19:17:03.963] [DEBUG] [snake_server] [_handle_player]: Player M has disconnected
+[16-06-2022 20:03:12.756] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 20:03:12.756] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:03:15.515] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 20:03:17.245] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 20:03:17.246] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:03:17.257] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 20:03:17.257] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 20:03:17.263] [DEBUG] [snake_client] [__init__]: Ready
+[16-06-2022 20:03:20.723] [DEBUG] [snake_server] [_get_clients]: Client M connected
+[16-06-2022 20:03:20.724] [DEBUG] [snake_server] [__init__]: Got all clients
+[16-06-2022 20:03:21.113] [DEBUG] [snake_server] [_handle_player]: Player 0 is ready
+[16-06-2022 20:03:21.114] [DEBUG] [snake_server] [_handle_player]: Player 1 is ready
+[16-06-2022 20:03:21.119] [DEBUG] [snake_server] [mainloop]: In mainloop
+[16-06-2022 20:03:44.409] [DEBUG] [snake_server] [_handle_player]: Player L has disconnected
+[16-06-2022 20:42:16.618] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 20:42:16.619] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:42:19.362] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 20:42:19.364] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:42:45.461] [DEBUG] [snake_server] [__init__]: Server is up and running
+[16-06-2022 20:42:45.461] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:42:47.430] [DEBUG] [snake_client] [__init__]: Connected to server
+[16-06-2022 20:42:48.637] [DEBUG] [snake_server] [_get_clients]: Client L connected
+[16-06-2022 20:42:48.639] [DEBUG] [snake_server] [_get_clients]: Listening for clients
+[16-06-2022 20:42:48.649] [DEBUG] [snake_client] [__init__]: My ID is 0
+[16-06-2022 20:42:48.649] [DEBUG] [snake_client] [__init__]: My color is [0, 255, 255]
+[16-06-2022 20:42:48.652] [DEBUG] [snake_client] [__init__]: Ready

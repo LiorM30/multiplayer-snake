@@ -8,7 +8,7 @@ class Snake_Body(pygame.sprite.Sprite):
     def __init__(
         self,
         x: int, y: int,
-        part: Snake_Part, direction: Direction,
+        part: Snake_Part, direction: Direction, color: Color,
         all_images: dict
     ) -> None:
 
@@ -29,6 +29,8 @@ class Snake_Body(pygame.sprite.Sprite):
         self.rect.center = (x, y)
 
         self.direction = direction
+
+        self._color = color
 
         self.current_rotation = 0  # pointing up
         self.set_direction(direction)
@@ -58,7 +60,8 @@ class Snake_Body(pygame.sprite.Sprite):
 
     def set_direction(self, new_direction: Direction) -> None:
         """
-        Sets the sprites direction and rotates the sprite according to the direction
+        Sets the sprites direction and rotates the sprite according to the\
+         direction
 
         ...
         :param new_direction: the direction to point to
@@ -172,6 +175,7 @@ class Snake_Body(pygame.sprite.Sprite):
             case Snake_Part.TAIL:
                 a_dict['object'] = Game_Object.SNAKE_TAIL
 
+        a_dict['color'] = self._color
         a_dict['coords'] = list(self.pos())
         a_dict['direction'] = self.direction
 
@@ -220,6 +224,7 @@ class Apple(pygame.sprite.Sprite):
     def to_dict(self):
         return {
             'object': Game_Object.APPLE,
+            'color': None,
             'coords': self.pos(),
             'direction': None
         }

@@ -26,7 +26,19 @@ class Game_Object(str, Enum):
     EXPLOSION = 'explosion'
 
 
-class Color(Enum):
+class Game_State(str, Enum):
+    HASNT_STARTED = 'hasnt started'
+    ONGOING = 'ongoing'
+    DONE = 'done'
+
+
+class Player_State(str, Enum):
+    INGAME = 'ingame'
+    WON = 'won'
+    LOST = 'lost'
+
+
+class Color(tuple, Enum):
     # (R, G, B)
     WHITE = (255, 255, 255)
     GREEN = (0, 255, 0)
@@ -47,7 +59,7 @@ class Color(Enum):
     CYAN = (0, 255, 255)
 
 
-class Snake_Part(Enum):
+class Snake_Part(str, Enum):
     TAIL = 'tail'
     BODY = 'body'
     HEAD = 'head'

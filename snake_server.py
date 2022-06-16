@@ -8,7 +8,8 @@ import logging
 import argparse
 import random
 
-from enums import Direction, Player_Command, Game_Object, Snake_Part
+from enums import Direction, Player_Command, Snake_Part, \
+    Player_State, Game_State
 from sprites import Snake_Body, Apple
 from game_packet_API import Game_Packet, Game_Packet_Type
 from snake_config import Snake_Config as Config
@@ -35,8 +36,15 @@ class Snake_Server:
         )
         self._parser.add_argument(
             '--log_level', action='store', type=int, default=20,
-            help='Log level (50=Critical, 40=Error, 30=Warning ,20=Info ,10=Debug, 0=None)'
+            help='Log level (50=Critical, 40=Error, 30=Warning ,20=Info ,10=Debug, 0=None)'  # noqa
         )
+
+        self._parser.add_argument(
+            '--player_count', action='store', type=int,
+            default=2, choices=range(0, 5),
+            help='number of players that will play, up to 4'
+        )
+
         self._args = self._parser.parse_args()
 
         logging.basicConfig(
@@ -50,9 +58,12 @@ class Snake_Server:
 
         self._logger = logging.getLogger()
 
+        self._num_of_players = self._args.player_count
+
         self.server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_sock.bind(
-            (socket.gethostbyname(socket.gethostname()), port))
+            (socket.gethostbyname(socket.gethostname()), port)
+        )
         self._logger.debug('Server is up and running')
 
         self._players = {}
@@ -65,41 +76,36 @@ class Snake_Server:
         self._get_clients()
         self._logger.debug('Got all clients')
 
-        # self._player_sprites = {}
-
         pygame.init()
 
+        # need a screen for things like sprites
         self._server_screen = pygame.display.set_mode(
             (40, 40)
         )
 
         self._clock = pygame.time.Clock()
 
+        # setting the snakes dictionary
         self._snakes = {}
-        for i in range(len(self._players)):
-            self._snakes[i] = []
+        for ID in self._players:
+            self._snakes[ID] = []
         self._snake_sprite_group = pygame.sprite.Group()
-
-        self.image_loader = Loaded_Images()
-        self.all_images = self.image_loader.all
 
         self._sprites_to_send = []
 
+        # initializing sprites
         self._init_snakes()
         self._apples = self._generate_apples(len(self._players))
         self._apple_sprite_group = pygame.sprite.Group()
         self._apple_sprite_group.add(self._apples)
 
-        self.image_loader = Loaded_Images()
-        self.all_images = self.image_loader.all
+        # need to load the images not during gametime
+        # to not take up time
 
-        for ID, player in self._players.items():
-            self._send_data(
-                player.sock,
-                Game_Packet(
-                    type=Game_Packet_Type.START_GAME
-                )
-            )
+        self.image_loader = Loaded_Images()
+        self.all_images = self.image_loader._all
+
+        self._logger.debug('Done initializing')
 
     def _get_clients(self) -> None:
         """
@@ -111,13 +117,13 @@ class Snake_Server:
             self._logger.debug('Listening for clients')
             self.server_sock.listen()
             client, client_address = self.server_sock.accept()
-            username = self._recieve_packet(client)['data']['username']
+            username = self._recieve_packet(client).data['username']
             self._logger.debug(f'Client {username} connected')
 
             new_player = Player(
                 username=username,
                 ID=currentID,
-                sock=client,
+                sock=client
             )
 
             self._players[currentID] = new_player
@@ -129,8 +135,19 @@ class Snake_Server:
                 )
             )
 
+            self._send_data(
+                client=client,
+                data=Game_Packet(
+                    type=Game_Packet_Type.PLAYER_INFO,
+                    data={
+                        'player ID': currentID,
+                        'player color': Config.SNAKE_COLORS[currentID]
+                    }
+                )
+            )
+
             currentID += 1
-            if len(self._players) == 2:
+            if len(self._players) == self._num_of_players:
                 break
 
     def _handle_player(self, player: Player):
@@ -143,22 +160,29 @@ class Snake_Server:
         try:
             while True:
                 packet = self._recieve_packet(player.sock)
-                if packet['type'] == Game_Packet_Type.PLAYER_INPUTS:
-                    if packet['data']['status'] == Player_Command.QUIT:
+                if packet.type == Game_Packet_Type.PLAYER_READY:
+                    self._logger.debug(f'Player {player.ID} is ready')
+                    self._players_ready += 1
+                elif packet.type == Game_Packet_Type.PLAYER_INPUTS:
+                    if packet.data['status'] == Player_Command.QUIT:
                         player.sock.close()
+                        self._remove_snake(player.ID)
+                        self._snakes.pop(player.ID)
+                        self._players.pop(player.ID)
+
                         self._logger.debug(
                             f'Player {player.username} has disconnected'
                         )
                         break
 
-                    for key, val in packet['data'].items():
+                    for key, val in packet.data.items():
                         if val is not None:
                             self._requests.append(
                                 Request(val, player.ID)
                             )
                             print(val)
 
-                elif packet['type'] == Game_Packet_Type.GAME_STATUS_REQUEST:
+                elif packet.type == Game_Packet_Type.GAME_STATUS_REQUEST:
                     data = {
                         'sprites': [],
                         'game state': None,
@@ -167,11 +191,14 @@ class Snake_Server:
                     for sprite in self._sprites_to_send:
                         data['sprites'].append(sprite.to_dict())
                     if len(self._players) == len(self._players_lost) + 1:
-                        data['game state'] = Game_Packet_Type.GAME_DONE
+                        data['game state'] = Game_State.DONE
+                    else:
+                        data['game state'] = Game_State.ONGOING
+
                     if self._player_won == player.ID:
-                        data['player state'] = Game_Packet_Type.PLAYER_WON
+                        data['player state'] = Player_State.WON
                     elif player.ID in self._players_lost:
-                        data['player state'] = Game_Packet_Type.PLAYER_LOST
+                        data['player state'] = Player_State.LOST
 
                     self._send_data(
                         player.sock,
@@ -180,24 +207,20 @@ class Snake_Server:
                             data=data
                         )
                     )
-                    # if len(self._players) == len(self._players_lost) + 1:
-                    #     sleep(0.5)
-                    #     player.sock.close()
-                    #     self._logger.debug(f'Closed connection with {player.username}')
-                    #     break
                     if self.stop_handling_clients:
                         player.sock.close()
-                        self._logger.debug(f'Closed connection with {player.username}')
+                        self._players.pop(player.ID)
+                        self._logger.debug(
+                            f'Closed connection with {player.username}'
+                        )
                         break
 
-
-                # if self.stop_handling_clients:
-                #     player.sock.close()
-                #     self._logger.debug(f'Closed connection with {player.username}')
-                #     break
-
-        except ConnectionResetError or json.JSONDecodeError:
-            self._logger.debug(f'Player {player.username} has disconnected unexpectedly')
+        except ConnectionResetError or json.decoder.JSONDecodeError:
+            self._logger.debug(
+                f'Player {player.username} has disconnected unexpectedly'
+            )
+            self._snakes.pop(player.ID)
+            self._remove_snake(player.ID)
             self._players.pop(player.ID)
 
     def _init_snakes(self) -> None:
@@ -205,45 +228,62 @@ class Snake_Server:
         Initializes the snakes according to the number of players
         """
 
-        row_space = Config.SCREEN_HEIGHT / len(self._players)
-        for i in range(len(self._players)):
-            self._snakes[i].append(
+        count = 1
+        row_space = Config.SCREEN_HEIGHT / (len(self._players) + 1)
+        for ID, player in self._players.items():
+            part_x = 7.5
+            self._snakes[ID].append(
                 Snake_Body(
-                    7.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1),
+                    part_x * Config.TILE_WIDTH,
+                    row_space * count,
                     Snake_Part.HEAD,
                     Direction.RIGHT,
+                    Config.SNAKE_COLORS[ID],
                     self.all_images
                 )
             )
-            self._snakes[i].append(
+            # alternating between facing left and facing right
+            if count % 2 == 0:
+                part_x += 1
+            else:
+                part_x -= 1
+            self._snakes[ID].append(
                 Snake_Body(
-                    6.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1),
+                    part_x * Config.TILE_WIDTH,
+                    row_space * count,
                     Snake_Part.BODY,
                     Direction.RIGHT,
+                    Config.SNAKE_COLORS[ID],
                     self.all_images
                 )
             )
-            self._snakes[i].append(
+            if count % 2 == 0:
+                part_x += 1
+            else:
+                part_x -= 1
+            self._snakes[ID].append(
                 Snake_Body(
-                    5.5 * Config.TILE_WIDTH,
-                    row_space * (i + 1),
+                    part_x * Config.TILE_WIDTH,
+                    row_space * count,
                     Snake_Part.TAIL,
                     Direction.RIGHT,
+                    Config.SNAKE_COLORS[ID],
                     self.all_images
                 )
             )
-            self._sprites_to_send.extend(self._snakes[i])
-            self._snake_sprite_group.add(self._snakes[i])
+            self._sprites_to_send.extend(self._snakes[ID])
+            self._snake_sprite_group.add(self._snakes[ID])
+            count += 1
 
     def _generate_apples(self, num_of_apples: int) -> Apple:
         """
         Generates a list of apples
 
         ...
-        :return: a list of apples that dont intersect with the snakes and aren't off screen
+        :return: a list of apples that dont intersect\
+         with the snakes and aren't off screen
         """
+
         apples = []
         apple_coords_list = []
 
@@ -263,10 +303,12 @@ class Snake_Server:
                         if part.collide_point(apple_coords):
                             apple_coords = (
                                 random.randrange(
-                                    0, Config.GAME_WIDTH + 1) * Config.TILE_WIDTH
+                                    0, Config.GAME_WIDTH + 1
+                                ) * Config.TILE_WIDTH
                                 + Config.TILE_WIDTH / 2,  # offset
                                 random.randrange(
-                                    0, Config.GAME_HEIGHT + 1) * Config.TILE_HEIGHT
+                                    0, Config.GAME_HEIGHT + 1
+                                ) * Config.TILE_HEIGHT
                                 + Config.TILE_WIDTH / 2,
                             )
                             again = True
@@ -282,7 +324,7 @@ class Snake_Server:
         self._sprites_to_send.extend(apples)
         return apples
 
-    def _snake_hit_apple(self, snake: list[Snake_Body]) -> Apple:
+    def _snake_hit_apple(self, snake_ID: int) -> Apple:
         """
         Checks if the snake given hit an apple and returns the apple it hit
         if th snake didng hit an apple returns None
@@ -290,48 +332,70 @@ class Snake_Server:
         :param snake: the snake to check
         :return: the apple it hit
         """
+
         for apple in self._apples:
-            if apple.rect.collidelist(snake) != -1:
+            if apple.rect.collidelist(self._snakes[snake_ID]) != -1:
                 return apple
         return None
 
-    def _grow_snake(self, snake: list[Snake_Body]) -> None:
+    def _grow_snake(self, snake_ID) -> None:
         """
         Makes the snake grow, adds body to the snake list and sprite group
+        ...
+        :param snake_ID: the ID of the snake to grow
         """
 
-        snake[-1].change_costume(Snake_Part.BODY)
+        self._snakes[snake_ID][-1].change_costume(Snake_Part.BODY)
         new_part = Snake_Body(
-            snake[-1].get_x() + Config.TILE_WIDTH / 2,
-            snake[-1].get_y() + Config.TILE_HEIGHT / 2,
+            self._snakes[snake_ID][-1].get_x() + Config.TILE_WIDTH / 2,
+            self._snakes[snake_ID][-1].get_y() + Config.TILE_HEIGHT / 2,
             Snake_Part.TAIL,
             None,
+            Config.SNAKE_COLORS[snake_ID],
             self.all_images
         )
 
         self._sprites_to_send.append(new_part)
-        snake.append(new_part)
+        self._snakes[snake_ID].append(new_part)
         self._snake_sprite_group.add(new_part)
 
-    def _snake_hit_self(self, snake: list[Snake_Body]) -> bool:
+    def _snake_hit_self(self, snake_ID: int) -> bool:
         """
+        :param snake_ID: the id of the snake to check
         :return: if the snake hits itself
         """
 
-        if len(snake) < 5:  # can only hit body from the fifth onward
-            return False
-        return snake[0].rect.collidelist(snake[4:]) != -1
+        if len(self._snakes[snake_ID]) > 4:
+            if self._snakes[snake_ID][0].rect.collidelist(self._snakes[snake_ID][4:]) != -1:  # noqa
+                self._logger.debug(
+                    f'snake {snake_ID} has collided with itself'
+                )
+                return True
+        for ID, snake in self._snakes.items():
+            if ID != snake_ID:
+                if self._snakes[snake_ID][0].rect.collidelist(snake) >= 0:
+                    self._logger.debug(
+                        f'snake {snake_ID} has collided with snake {ID}'
+                    )
+                    return True
+        return False
 
-    def _snake_hit_screen_edge(self, snake: list[Snake_Body]) -> bool:
+    def _snake_hit_screen_edge(self, snake_ID: int) -> bool:
         """
         :return: if the snake hit the edge of the screen
         """
 
-        return not 0 <= snake[0].get_y() < Config.SCREEN_HEIGHT or\
-            not 0 <= snake[0].get_x() < Config.SCREEN_WIDTH
+        return not 0 <= self._snakes[snake_ID][0].get_y() < Config.SCREEN_HEIGHT or \
+            not 0 <= self._snakes[snake_ID][0].get_x() < Config.SCREEN_WIDTH
 
-    def _remove_snake(self, snake: list[Snake_Body]) -> None:
-        for part in snake:
+    def _remove_snake(self, snake_ID: int) -> None:
+        """
+        Removes a snake from the game
+        ...
+        :param snake_ID: the ID of the snake to kill
+        """
+
+        for part in self._snakes[snake_ID]:
             part.kill()
             self._sprites_to_send.remove(part)
 
@@ -348,16 +412,44 @@ class Snake_Server:
         client.send(ser_data.encode())
 
     def _recieve_packet(self, client: socket.socket) -> Game_Packet:
-        return json.loads(
-            client.recv(1024).decode()
+        """
+        Recieves the packet the client sent
+        ...
+        :param client: the client to recieve from
+        :return: the game packet
+        """
+
+        return Game_Packet(
+            **json.loads(
+                client.recv(1024).decode()
+            )
         )
 
-    def mainloop(self) -> None:
+    def run_game(self) -> None:
         """
         The mainloop of the program, call to run it
         """
 
-        self._logger.debug('In mainloop')
+        self._logger.debug('Running game')
+        self._players_ready = 0
+
+        for t in self._threads:  # starting all threads
+            t.start()
+
+        # waiting for all players to be ready:
+        while self._players_ready != len(self._players):
+            pass
+        self._logger.debug('Everyone is ready')
+
+        #  telling the players that the game started
+        for ID, player in self._players.items():
+            self._send_data(
+                player.sock,
+                Game_Packet(
+                    type=Game_Packet_Type.START_GAME
+                )
+            )
+        self._logger.debug('Sent start game packets')
 
         # creating custom events names
         CHANGE_DIRECTION = pygame.USEREVENT + 1
@@ -370,11 +462,12 @@ class Snake_Server:
         for ID in self._players:
             new_directions[ID] = Direction.RIGHT
 
-        for t in self._threads:
-            t.start()
         while True:
+            if len(self._players) == 0:  # all players quit\game is done
+                break
             self._clock.tick(20)
-            if self._requests:
+
+            if self._requests:  # has player requests
                 for request in self._requests:
                     player_ID = request.player_ID
                     try:
@@ -393,9 +486,11 @@ class Snake_Server:
                                 if snake_head.direction != Direction.LEFT:
                                     new_directions[player_ID] = Direction.RIGHT
                     except KeyError:
-                        self._logger.debug('No snakes')
+                        # someone quit unexpectidly while iterating
+                        pass
 
-                self._requests.clear()  # clear events list after iterating through them
+                # clear events list after iterating through them
+                self._requests.clear()
 
             for event in pygame.event.get():
                 if event.type == CHANGE_DIRECTION:
@@ -406,7 +501,8 @@ class Snake_Server:
                             part.snap()  # snap to the nearest tile
                             # since pygame is not accurate enough
                             # we need to snap every part to place
-
+                        
+                        # setting part directions
                         for i in range(len(snake) - 1, 0, -1):
                             current_part = snake[i]
                             next_part = snake[i - 1]
@@ -419,39 +515,50 @@ class Snake_Server:
                             elif current_part.get_y() < next_part.get_y():
                                 current_part.set_direction(Direction.DOWN)
 
+                # updating snakes
                 if event.type == UPDATE_SNAKE:
-                    self._snake_sprite_group.update()
+                    for ID, snake in self._snakes.items():
+                        if ID == 1:
+                            for part in snake:
+                                part.update()
+                    # self._snake_sprite_group.update()
 
             IDs_to_remove = []
-            for snake_id, snake in self._snakes.items():
-                apple_hit = self._snake_hit_apple(snake)
+            for snake_ID in self._snakes:
+                apple_hit = self._snake_hit_apple(snake_ID)
                 if apple_hit:
-                    self._grow_snake(snake)
+                    self._grow_snake(snake_ID)
                     self._apples.remove(apple_hit)
                     self._sprites_to_send.remove(apple_hit)
                     apple_hit.kill()
                     new_apple = self._generate_apples(1)
-                    self._apples.append(new_apple[0])
+                    self._apples.extend(new_apple)
                     self._apple_sprite_group.add(new_apple)
 
-                if self._snake_hit_self(snake) or self._snake_hit_screen_edge(snake):
+                if self._snake_hit_self(snake_ID) or \
+                   self._snake_hit_screen_edge(snake_ID):
+
+                    # only one player left
                     if len(self._players) - len(self._players_lost) == 1:
                         self._player_won = set(self._players) - set(self._players_lost)
+
+                        # make sure every player got a game
+                        # update before stopping the game
                         sleep(0.5)
                         self.stop_handling_clients = True
 
-                    self._players_lost.append(snake_id)
-                    self._remove_snake(snake)
-                    IDs_to_remove.append(snake_id)
-            for id in IDs_to_remove:
-                self._snakes.pop(id)
+                    self._players_lost.append(snake_ID)
+                    self._remove_snake(snake_ID)
+                    IDs_to_remove.append(snake_ID)
+            for ID in IDs_to_remove:
+                self._snakes.pop(ID)
 
-            self._snake_sprite_group.update()
+        self._logger.debug('Game done')
 
 
 def main():
     server = Snake_Server(3333)
-    server.mainloop()
+    server.run_game()
 
 
 if __name__ == "__main__":
