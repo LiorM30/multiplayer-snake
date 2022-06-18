@@ -41,7 +41,7 @@ class Snake_Server:
 
         self._parser.add_argument(
             '--player_count', action='store', type=int,
-            default=2, choices=range(0, 5),
+            default=2, choices=range(2, 5),
             help='number of players that will play, up to 4'
         )
 
@@ -65,6 +65,9 @@ class Snake_Server:
             (socket.gethostbyname(socket.gethostname()), port)
         )
         self._logger.debug('Server is up and running')
+        self._logger.info(
+            f'Server IP is {socket.gethostbyname(socket.gethostname())}'
+        )
 
         self._players = {}
         self._players_lost = []
@@ -524,11 +527,11 @@ class Snake_Server:
 
                 # updating snakes
                 if event.type == UPDATE_SNAKE:
-                    # for ID, snake in self._snakes.items():
-                    #     if ID == 1:
-                    #         for part in snake:
-                    #             part.update()
-                    self._snake_sprite_group.update()
+                    for ID, snake in self._snakes.items():
+                        if ID == 1:
+                            for part in snake:
+                                part.update()
+                    # self._snake_sprite_group.update()
 
             IDs_to_remove = []
             for snake_ID in self._snakes:
@@ -547,7 +550,8 @@ class Snake_Server:
 
                     # only one player left
                     if len(self._players) - len(self._players_lost) == 1:
-                        self._player_won = set(self._players) - set(self._players_lost)
+                        self._player_won = set(
+                            self._players) - set(self._players_lost)
 
                         # make sure every player got a game
                         # update before stopping the game
