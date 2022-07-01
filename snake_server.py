@@ -45,6 +45,12 @@ class Snake_Server:
             help='number of players that will play, up to 4'
         )
 
+        self._parser.add_argument(
+            '--debug', action='store', type=bool,
+            default=False, choices=[True, False],
+            help='makes only the last player who joined move during the game, helps when debugging'  # noqa
+        )
+
         self._args = self._parser.parse_args()
 
         logging.basicConfig(
@@ -59,6 +65,7 @@ class Snake_Server:
         self._logger = logging.getLogger()
 
         self._num_of_players = self._args.player_count
+        self._game_debug = self._args.debug
 
         self.server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_sock.bind(
@@ -527,11 +534,13 @@ class Snake_Server:
 
                 # updating snakes
                 if event.type == UPDATE_SNAKE:
-                    for ID, snake in self._snakes.items():
-                        if ID == 1:
-                            for part in snake:
-                                part.update()
-                    # self._snake_sprite_group.update()
+                    if self._game_debug:
+                        for ID, snake in self._snakes.items():
+                            if ID == 1:
+                                for part in snake:
+                                    part.update()
+                    else:
+                        self._snake_sprite_group.update()
 
             IDs_to_remove = []
             for snake_ID in self._snakes:
